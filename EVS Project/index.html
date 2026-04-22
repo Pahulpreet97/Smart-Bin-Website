@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Dustbin Sensor Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-bin" id="cursorBin">BIN</div>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Smart Sorting Game</p>
+        <h1>Throw The Waste Into The Smart Dustbin</h1>
+        <p class="hero-text">
+          Pick a scattered waste item, then throw it into the glowing smart core.
+          Every throw reveals the full machine journey through the sensors.
+        </p>
+      </div>
+      <div class="hero-card">
+        <h2>Sensor Route</h2>
+        <p>Ultrasonic. Image. Inductive. Infrared. IoT. Solar compactor.</p>
+      </div>
+    </section>
+
+    <section class="layout">
+      <section class="arena-panel">
+        <div class="hud">
+          <div class="pill" id="scoreChip">Score: 0</div>
+          <div class="pill" id="leftChip">Left: 6</div>
+          <div class="pill" id="heldChip">Holding: none</div>
+        </div>
+
+        <div class="arena" id="arena">
+          <button class="sorting-core" id="sortingCore" type="button">
+            THROW
+            <span>smart dustbin core</span>
+          </button>
+
+          <button class="waste plastic" data-type="plastic" data-name="Plastic Bottle" style="left: 8%; top: 18%;" type="button">
+            <span class="icon">🧴</span>
+            <span class="label">Bottle</span>
+          </button>
+
+          <button class="waste metal" data-type="metal" data-name="Metal Can" style="left: 74%; top: 16%;" type="button">
+            <span class="icon">🥫</span>
+            <span class="label">Can</span>
+          </button>
+
+          <button class="waste organic" data-type="organic" data-name="Banana Peel" style="left: 16%; top: 66%;" type="button">
+            <span class="icon">🍌</span>
+            <span class="label">Peel</span>
+          </button>
+
+          <button class="waste plastic" data-type="plastic" data-name="Plastic Cup" style="left: 82%; top: 64%;" type="button">
+            <span class="icon">🥤</span>
+            <span class="label">Cup</span>
+          </button>
+
+          <button class="waste organic" data-type="organic" data-name="Apple Core" style="left: 10%; top: 42%;" type="button">
+            <span class="icon">🍎</span>
+            <span class="label">Apple</span>
+          </button>
+
+          <button class="waste metal" data-type="metal" data-name="Foil Tray" style="left: 66%; top: 76%;" type="button">
+            <span class="icon">🍱</span>
+            <span class="label">Tray</span>
+          </button>
+        </div>
+      </section>
+
+      <aside class="info-panel">
+        <div class="status-card">
+          <h2 id="statusTitle">Ready</h2>
+          <p id="statusText">Click one waste item to catch it with the cursor dustbin.</p>
+        </div>
+
+        <div class="process-panel">
+          <h2>Inside The Bin</h2>
+          <div class="process-list" id="processList"></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
